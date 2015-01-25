@@ -29,17 +29,17 @@
 - (IBAction)Press:(id)sender {
     
     UIAlertView *aletrshow = [[UIAlertView alloc]
-                                initWithTitle:@"Alert"
-                                message:@"You've been delivered an alert"
+                                initWithTitle:@"Open Link"
+                                message:@"Are you sure you want to open this link in Safari?"
                                 delegate:self
                                 cancelButtonTitle:[self noButtonTitle]
                                 otherButtonTitles:[self yesButtonTitle], nil];
     
     
     /* Display a numerical keypad for this text field */
-    [aletrshow setAlertViewStyle:UIAlertViewStylePlainTextInput];
-    UITextField *textField = [aletrshow textFieldAtIndex:0];
-    textField.keyboardType = UIKeyboardTypeNumberPad;
+//    [aletrshow setAlertViewStyle:UIAlertViewStylePlainTextInput];
+//    UITextField *textField = [aletrshow textFieldAtIndex:0];
+//    textField.keyboardType = UIKeyboardTypeNumberPad;
     
     [aletrshow show];
     
@@ -61,25 +61,29 @@
 }
 
 
-- (NSString *) yesButtonTitle { return @"Yes"; }
+- (NSString *) yesButtonTitle {
+    return @"Yes";
+}
 
-- (NSString *) noButtonTitle { return @"No"; }
+- (NSString *) noButtonTitle {
+    return @"No";
+}
 
 
     //designated initializer. viewDidAppear: Notifies the view controller that its view was added to a view hierarchy.
-- (void) viewDidAppear:(BOOL)paramAnimated
-{
-
-    UIAlertView *alert = [[UIAlertView alloc]
-                              initWithTitle:@"Alert"
-                              message:@"You've been delivered an alert"
-                              delegate:nil
-                              cancelButtonTitle:@"Cancel"
-                              otherButtonTitles:@"Ok", @"Other button", nil];
-  
-      [alert show];
- 
-}
+//- (void) viewDidAppear:(BOOL)paramAnimated
+//{
+//
+//    UIAlertView *alert = [[UIAlertView alloc]
+//                              initWithTitle:@"Alert"
+//                              message:@"You've been delivered an alert"
+//                              delegate:nil
+//                              cancelButtonTitle:@"Cancel"
+//                              otherButtonTitles:@"Ok", @"Other button", nil];
+//  
+//      [alert show];
+// 
+//}
 
 
 @end
