@@ -28,21 +28,7 @@
 
 - (IBAction)Press:(id)sender {
     
-    UIAlertView *aletrshow = [[UIAlertView alloc]
-                                initWithTitle:@"Open Link"
-                                message:@"Are you sure you want to open this link in Safari?"
-                                delegate:self
-                                cancelButtonTitle:[self noButtonTitle]
-                                otherButtonTitles:[self yesButtonTitle], nil];
-    
-    
-    /* Display a numerical keypad for this text field */
-//    [aletrshow setAlertViewStyle:UIAlertViewStylePlainTextInput];
-//    UITextField *textField = [aletrshow textFieldAtIndex:0];
-//    textField.keyboardType = UIKeyboardTypeNumberPad;
-    
-    [aletrshow show];
-    
+    [self alertTwo];
 }
 
 
@@ -84,6 +70,39 @@
 //      [alert show];
 // 
 //}
+
+- (void) alertOne
+{
+
+    UIAlertView *aletrshow = [[UIAlertView alloc]
+                              initWithTitle:@"Open Link"
+                              message:@"Are you sure you want to open this link in Safari?"
+                              delegate:self
+                              cancelButtonTitle:[self noButtonTitle]
+                              otherButtonTitles:[self yesButtonTitle], nil];
+    [aletrshow show];
+
+
+}
+
+- (void) alertTwo
+{
+    
+    UIAlertView *aletrshow = [[UIAlertView alloc]
+                              initWithTitle:@"Credit Card Number"
+                              message:@"Please enter your credit card number:"
+                              delegate:self
+                              cancelButtonTitle:@"Cancel"
+                              otherButtonTitles:@"Ok", nil];
+    
+     [aletrshow setAlertViewStyle:UIAlertViewStylePlainTextInput];
+    /* Display a numerical keypad for this text field */
+    UITextField *textField = [aletrshow textFieldAtIndex:0];
+    textField.keyboardType = UIKeyboardTypeNumberPad;
+    
+    [aletrshow show];
+    
+}
 
 
 @end
