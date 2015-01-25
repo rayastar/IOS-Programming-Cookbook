@@ -17,7 +17,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    //[super viewDidAppear:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -70,23 +70,16 @@
 - (void) viewDidAppear:(BOOL)paramAnimated
 {
 
-//    UIAlertView *alert = [[UIAlertView alloc]
-//                              initWithTitle:@"Alert"
-//                              message:@"You've been delivered an alert"
-//                              delegate:nil
-//                              cancelButtonTitle:@"Cancel"
-//                              otherButtonTitles:@"Ok", @"Other button", nil];
-//  
-//    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
-//
-//    UITextField * alertTextField1 = [alert textFieldAtIndex:0];
-//    alertTextField1.keyboardType = UIKeyboardTypeDefault;
-//    [[alert textFieldAtIndex:0] setSecureTextEntry:NO];
-//
-//    UITextField * alertTextField2 = [alert textFieldAtIndex:1];
-//    alertTextField2.keyboardType = UIKeyboardTypeDefault;
-//    [alert show];
+    UIAlertView *alert = [[UIAlertView alloc]
+                              initWithTitle:@"Alert"
+                              message:@"You've been delivered an alert"
+                              delegate:nil
+                              cancelButtonTitle:@"Cancel"
+                              otherButtonTitles:@"Ok", @"Other button", nil];
+  
+      [alert show];
  
 }
+
 
 @end

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>142CE4C4-DA1C-4F90-A6A0-381CD6B255D6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>4.2</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5A118D8C-026A-4BF5-9BDE-5908A9100CCB</key>
+		<string>https://github.com/rayastar/IOS-Programming-Cookbook.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>4.2/4.2.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5A118D8C-026A-4BF5-9BDE-5908A9100CCB</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/rayastar/IOS-Programming-Cookbook.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5A118D8C-026A-4BF5-9BDE-5908A9100CCB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5A118D8C-026A-4BF5-9BDE-5908A9100CCB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>IOS-Programming-Cookbook</string>
+		</dict>
+	</array>
+</dict>
+</plist>
