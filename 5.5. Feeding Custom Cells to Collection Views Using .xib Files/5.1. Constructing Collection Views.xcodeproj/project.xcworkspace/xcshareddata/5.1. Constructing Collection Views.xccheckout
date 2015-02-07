@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>76F19CA3-2183-408D-90D7-ED0D68A7E86B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>5.1. Constructing Collection Views</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DF15A85C-5414-4FFC-975A-F4EACAB46280</key>
+		<string>https://github.com/rayastar/IOS-Programming-Cookbook_test.git</string>
+		<key>EF12E6F3-1799-4F11-A206-50F873508DFA</key>
+		<string>https://github.com/rayastar/IOS-Programming-Cookbook.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>IOS-Programming-Cookbook/5.5. Feeding Custom Cells to Collection Views Using .xib Files/5.1. Constructing Collection Views.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DF15A85C-5414-4FFC-975A-F4EACAB46280</key>
+		<string>../../../..</string>
+		<key>EF12E6F3-1799-4F11-A206-50F873508DFA</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/rayastar/IOS-Programming-Cookbook.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DF15A85C-5414-4FFC-975A-F4EACAB46280</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DF15A85C-5414-4FFC-975A-F4EACAB46280</string>
+			<key>IDESourceControlWCCName</key>
+			<string>IOS  Programming Cookbook</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EF12E6F3-1799-4F11-A206-50F873508DFA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>IOS-Programming-Cookbook</string>
+		</dict>
+	</array>
+</dict>
+</plist>

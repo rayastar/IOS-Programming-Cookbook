@@ -9,7 +9,9 @@
 #import "ViewController.h"
 
 @interface ViewController () <UITextFieldDelegate>
-
+@property (nonatomic, strong) UITextField *myTextField;
+@property (nonatomic, strong) UILabel *labelCounter;
+@property (nonatomic, strong) UILabel *currencyLabel;
 @end
 
 @implementation ViewController
@@ -114,4 +116,8 @@
 
 
 @end
+
+
+
+
 

@@ -9,7 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
+@property (nonatomic, strong) UISegmentedControl *mySegmentedControl;
 @end
 
 @implementation ViewController
@@ -24,19 +24,19 @@
                          @"iPod",
                          @"iMac", nil];
     
-//    self.mySegmentedControl = [[UISegmentedControl alloc]
-//                               initWithItems:segments];
-//    self.mySegmentedControl.center = self.view.center;
-//    [self.view addSubview:self.mySegmentedControl];
-//    self.mySegmentedControl.transform = CGAffineTransformMakeRotation(M_PI / 2.0);
-    
-   
-    
     self.mySegmentedControl = [[UISegmentedControl alloc]
                                initWithItems:segments];
     self.mySegmentedControl.center = self.view.center;
     [self.view addSubview:self.mySegmentedControl];
-    //rself.mySegmentedControl.transform = CGAffineTransformMakeRotation(M_PI / 3.0);
+    self.mySegmentedControl.momentary = YES;
+    
+   
+    
+//    self.mySegmentedControl = [[UISegmentedControl alloc]
+//                               initWithItems:segments];
+//    self.mySegmentedControl.center = self.view.center;
+//    [self.view addSubview:self.mySegmentedControl];
+//    //rself.mySegmentedControl.transform = CGAffineTransformMakeRotation(M_PI / 3.0);
     [self.mySegmentedControl addTarget:self action:@selector(segmentChanged:)
                       forControlEvents:UIControlEventValueChanged];
     

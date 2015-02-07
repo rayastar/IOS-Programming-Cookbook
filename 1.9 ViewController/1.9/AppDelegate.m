@@ -25,13 +25,14 @@
     //    return YES;
     
     self.viewController = [[ViewController alloc]
-                           initWithNibName:@"ViewController"
+                           initWithNibName:nil
                            bundle:nil];
     self.window = [[UIWindow alloc]
                    initWithFrame:[[UIScreen mainScreen] bounds]];
     /* Make our view controller the root view controller */
     self.window.rootViewController = self.viewController;
-    self.window.backgroundColor = [UIColor whiteColor]; [self.window makeKeyAndVisible];
+    self.window.backgroundColor = [UIColor redColor];
+    [self.window makeKeyAndVisible];
     return YES;
     
 }

@@ -9,7 +9,8 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
+@property (nonatomic, strong) UISlider *slider;
+@property (nonatomic,strong) UILabel *label;
 @end
 
 @implementation ViewController
@@ -31,7 +32,9 @@
     /* Set the tint color of the maximum value */
     self.slider.thumbTintColor = [UIColor blackColor];
     
-    [self.slider addTarget:self action:@selector(sliderValueChanged:)  forControlEvents:UIControlEventValueChanged];
+    [self.slider addTarget:self
+                    action:@selector(sliderValueChanged:)
+          			forControlEvents:UIControlEventValueChanged];
     
     self.label = [[UILabel alloc] initWithFrame:CGRectMake(200, 50, 150, 44)];
     self.label.text = [NSString stringWithFormat:@"hello"];
@@ -69,3 +72,5 @@
  }
      
 @end
+
+

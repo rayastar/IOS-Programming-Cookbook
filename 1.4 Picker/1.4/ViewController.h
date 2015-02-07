@@ -8,9 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
-@property (nonatomic, strong) UIPickerView *myPicker;
-@property (weak, nonatomic) IBOutlet UIPickerView *secondPicker;
-@property (nonatomic,copy) NSArray *myarray;
-@property (nonatomic) NSInteger row;
+@interface ViewController : UIViewController
+
 @end

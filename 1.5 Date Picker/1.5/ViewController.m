@@ -9,7 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
+@property (nonatomic,strong) UIDatePicker *myDatePicker;
 @end
 
 @implementation ViewController
@@ -19,26 +19,26 @@
     [super viewDidLoad];
 	self.myDatePicker = [[UIDatePicker alloc] init];
     self.myDatePicker.center = self.view.center;
-    //self.myDatePicker.datePickerMode = UIDatePickerModeCountDownTimer;
+    self.myDatePicker.datePickerMode = UIDatePickerModeDate;
     [self.view addSubview:self.myDatePicker];
     
-//    NSTimeInterval twoMunutes = 2 * 60;
-//    [self.myDatePicker setCountDownDuration:twoMunutes];
+
+
+    NSTimeInterval oneYearTime = 365*24*60*60;
+    NSDate *todayDate = [NSDate date];
     
-//    NSTimeInterval oneYearTime = 365*24*60*60*(1);
-//    NSDate *todayDate = [NSDate date];
-//    
-//    NSDate *oneYearFromToday = [todayDate ];
-//    NSDate *twoYearsFromToday = [todayDate
-//                                 dateByAddingTimeInterval:2 * oneYearTime];
-//    
-//    self.myDatePicker.minimumDate = oneYearFromToday;
-//    self.myDatePicker.maximumDate = twoYearsFromToday;
-//    
-//    
-//    [self.myDatePicker    addTarget:self
-//                          action:@selector(datePickerDateChanged:)
-//                          forControlEvents:UIControlEventValueChanged];
+    NSDate *oneYearFromToday = [todayDate
+                                dateByAddingTimeInterval:oneYearTime];
+    NSDate *twoYearsFromToday = [todayDate
+                                dateByAddingTimeInterval:2 * oneYearTime];
+    
+    self.myDatePicker.minimumDate = oneYearFromToday;
+    self.myDatePicker.maximumDate = twoYearsFromToday;
+    
+    
+    [self.myDatePicker addTarget:self
+                       action:@selector(datePickerDateChanged:)
+                       forControlEvents:UIControlEventValueChanged];
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,3 +55,5 @@
 }
 
 @end
+
+

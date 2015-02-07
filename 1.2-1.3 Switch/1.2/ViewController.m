@@ -9,7 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
+@property (nonatomic, strong) UISwitch *mainSwitch;
 @end
 
 @implementation ViewController
@@ -55,7 +55,8 @@
         NSLog(@"The switch is turned on.");
     }else{
         NSLog(@"The switch is turned off.");
-    } }
+    }
+}
 
 
 @end

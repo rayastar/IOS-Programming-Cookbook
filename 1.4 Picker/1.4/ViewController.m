@@ -8,8 +8,11 @@
 
 #import "ViewController.h"
 
-@interface ViewController () 
-
+@interface ViewController ()  <UIPickerViewDataSource, UIPickerViewDelegate>
+@property (nonatomic, strong) UIPickerView *myPicker;
+@property (weak, nonatomic) IBOutlet UIPickerView *secondPicker;
+@property (nonatomic,copy) NSArray *myarray;
+@property (nonatomic) NSInteger row;
 @end
 
 @implementation ViewController
@@ -62,5 +65,10 @@
     }
     return nil;
 }
+
+//- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component;
+//{
+//    NSLog(@"yes");
+//}
 
 @end

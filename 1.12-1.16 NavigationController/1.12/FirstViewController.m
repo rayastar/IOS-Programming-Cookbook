@@ -7,9 +7,10 @@
 //
 
 #import "FirstViewController.h"
+#import "SecondViewController.h"
 
 @interface FirstViewController ()
-
+@property (nonatomic, strong) UIButton *displaySecondViewController;
 @end
 
 @implementation FirstViewController

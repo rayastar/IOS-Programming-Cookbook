@@ -9,9 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController 
-@property (nonatomic, strong) UITextField *myTextField;
-@property (nonatomic, strong) UILabel *labelCounter;
-@property (nonatomic, strong) UILabel *currencyLabel;
+
 
 
 @end
