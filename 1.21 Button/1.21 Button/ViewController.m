@@ -9,7 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
+@property (nonatomic, strong) UIButton *myButton;
 @end
 
 @implementation ViewController
@@ -52,3 +52,4 @@
 }
 
 @end
+

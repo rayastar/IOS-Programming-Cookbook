@@ -10,7 +10,7 @@
 
 static NSString *MyCellIdentifier = @"MyCells";
 
-@interface ViewController () <UITableViewDataSource>
+@interface ViewController () <UITableViewDataSource >
 @property (nonatomic, strong) UITableView *myTableView;
 @end
 
@@ -25,6 +25,7 @@ static NSString *MyCellIdentifier = @"MyCells";
     [self.myTableView registerClass:[UITableViewCell class]
              forCellReuseIdentifier:MyCellIdentifier];
     self.myTableView.dataSource = self;
+   // self.myTableView.delegate = self;
     /* Make sure our table view resizes correctly */
     self.myTableView.autoresizingMask =
     UIViewAutoresizingFlexibleWidth |
@@ -98,8 +99,13 @@ static NSString *MyCellIdentifier = @"MyCells";
 
 - (void) performExpand:(UIButton *)paramSender{
     /* Handle the tap event of the button */
-    __unused UITableViewCell *parentCell =
+    //__unused
+     UITableViewCell *parentCell =
     (UITableViewCell *)[self superviewOfType:[UITableViewCell class]
-                                     forView:paramSender]; /* Now do something with the cell if you want to */
+                                     forView:paramSender];
+    /* Now do something with the cell if you want to */
+   NSIndexPath *indexPath = [self.myTableView indexPathForCell:parentCell];
+    NSLog(@"%@",[NSString stringWithFormat:@"Section %ld, Cell %ld",
+                 (long)indexPath.section, (long)indexPath.row]);
 }
 @end

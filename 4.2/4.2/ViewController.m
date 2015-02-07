@@ -10,7 +10,7 @@
 
 static NSString *MyCellIdentifier = @"MyCells";
 
-@interface ViewController () <UITableViewDataSource>
+@interface ViewController () <UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong) UITableView *myTableView;
 @end
 
@@ -25,6 +25,7 @@ static NSString *MyCellIdentifier = @"MyCells";
     [self.myTableView registerClass:[UITableViewCell class]
              forCellReuseIdentifier:MyCellIdentifier];
     self.myTableView.dataSource = self;
+    self.myTableView.delegate = self;
     self.myTableView.autoresizingMask =
     UIViewAutoresizingFlexibleWidth |
     UIViewAutoresizingFlexibleHeight;
@@ -55,7 +56,8 @@ static NSString *MyCellIdentifier = @"MyCells";
         result.textLabel.text =
         [NSString stringWithFormat:@"Section %ld, Cell %ld",
          (long)indexPath.section, (long)indexPath.row];
-        result.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;    }
+        result.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+    }
     return result;
 }
 
@@ -65,7 +67,7 @@ static NSString *MyCellIdentifier = @"MyCells";
 
 - (void) tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath{
     /* Do something when the accessory button is tapped */
-    NSLog(@"Accessory button is tapped for cell at index path = %@", indexPath);
+    NSLog(@"cell at index path = %@", indexPath);
     UITableViewCell *ownerCell = [tableView cellForRowAtIndexPath:indexPath];
     NSLog(@"Cell Title = %@", ownerCell.textLabel.text);
 }

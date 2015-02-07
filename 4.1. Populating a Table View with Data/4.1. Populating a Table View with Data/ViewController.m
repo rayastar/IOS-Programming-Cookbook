@@ -12,7 +12,7 @@ static NSString *TableViewCellIdentifier = @"MyCells";
 
 @interface ViewController () <UITableViewDataSource>
 @property (nonatomic, strong) UITableView *myTableView;
-@property (nonatomic, strong) UIButton *button;
+
 @end
 
 @implementation ViewController
@@ -100,6 +100,6 @@ static NSString *TableViewCellIdentifier = @"MyCells";
 //    NSLog(@"Cell Title = %@", ownerCell.textLabel.text);
 //}
 
-
-
 @end
+
+
