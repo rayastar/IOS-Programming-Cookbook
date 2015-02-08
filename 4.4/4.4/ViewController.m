@@ -20,12 +20,15 @@ static NSString *TableViewCellIdentifier = @"MyCells";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.navigationItem setLeftBarButtonItem:self.editButtonItem
+                                     animated:NO];
     self.myTableView =
     [[UITableView alloc] initWithFrame:self.view.bounds
                                  style:UITableViewStylePlain];
     [self.myTableView registerClass:[UITableViewCell class]
              forCellReuseIdentifier:TableViewCellIdentifier];
     self.myTableView.dataSource = self;
+    self.myTableView.delegate = self;
     /* Make sure our table view resizes correctly */
     self.myTableView.autoresizingMask =
     UIViewAutoresizingFlexibleWidth |
@@ -37,29 +40,10 @@ static NSString *TableViewCellIdentifier = @"MyCells";
     
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-//-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-//    if ([tableView isEqual:self.myTableView]){
-//        return 3;
-//    }
-//    return 0;
-//}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-//    if ([tableView isEqual:self.myTableView]){ switch (section){
-//        case 0:{ return 3;
-//            break; }
-//        case 1:{ return 5;
-//            break; }
-//        case 2:{ return 8;
-//            break; }
-//    }
-//    }
+
     return [self.myArray count];
 }
 
@@ -78,21 +62,23 @@ static NSString *TableViewCellIdentifier = @"MyCells";
 
 
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return UITableViewCellEditingStyleInsert;
+    return UITableViewCellEditingStyleDelete;
 }
 
-- (void) setEditing:(BOOL)editing animated:(BOOL)animated{
+- (void) setEditing:(BOOL)editing
+           animated:(BOOL)animated{
+    
     [super setEditing:editing
              animated:animated];
+    
     [self.myTableView setEditing:editing
                         animated:animated];
+    
+    
 }
 
 
-- (void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
- forRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    
+- (void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if (editingStyle == UITableViewCellEditingStyleDelete){
         /* First remove this object from the source */
@@ -102,4 +88,6 @@ static NSString *TableViewCellIdentifier = @"MyCells";
                          withRowAnimation:UITableViewRowAnimationLeft];
     }
 }
+
+
 @end
